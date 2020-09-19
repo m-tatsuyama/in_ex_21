@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>MoneyBalance</title>
+    <title>money.be</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     
     <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://use.typekit.net/nfh8iwu.css">
   </head>
 
   <body>
     <header class="header">
       <div class="header__bar row">
-        <h1 class="grid-6"><a href="/">MoneyBalance</a></h1>
+        <h1 class="grid-6"><a href="/">money.be</a></h1>
         <% if user_signed_in? %>
           <div class="user_nav grid-6">
             <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
@@ -30,7 +31,7 @@
     <%= yield %>
     <footer>
       <p>
-        Copyright MoneyBalance 2020.
+        Copyright money.be 2020.
       </p>
     </footer>
   </body>
