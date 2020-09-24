@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><div class= "bold">@balance</div></title>
+    <title><div class= "bold">plus+minus-balance</div></title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     
@@ -14,7 +14,7 @@
   <body>
     <header class="header">
       <div class="header__bar row">
-        <h1 class="grid-6"><a href="/"><%= image_tag "pmbalance.svg", :width => '180', class:"+-balance" %></a></h1>
+        <h1 class="grid-6"><a href="/"><%= image_tag "pmbalance.svg", :width => '180', class:"plus-minus-balance" %></a></h1>
         <% if user_signed_in? %>
           <div class="grid-6 strong">
             <div class="margin-r50">
@@ -34,7 +34,7 @@
     <%= yield %>
     <footer>
       <p>
-        Copyright @balance 2020.
+        Copyright plus+minus-balance 2020.
       </p>
     </footer>
   </body>
