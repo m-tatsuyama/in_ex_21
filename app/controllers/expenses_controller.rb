@@ -1,5 +1,4 @@
 class ExpensesController < ApplicationController
-
   def new
     @expense = Expense.new
   end
@@ -22,7 +21,8 @@ class ExpensesController < ApplicationController
   end
 
   private
+
   def expense_params
-    params.require(:expense).permit(:ex_amount,:about_ex,:category_id, :month).merge(user_id: current_user.id)
+    params.require(:expense).permit(:ex_amount, :about_ex, :category_id, :month).merge(user_id: current_user.id)
   end
 end
