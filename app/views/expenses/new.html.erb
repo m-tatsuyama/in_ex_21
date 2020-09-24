@@ -1,10 +1,31 @@
-<div class="contents row">
+<div class="form-group">
   <div class="container">
-    <h3>支出の入力</h3>
-    <%= form_with(model: @expense, local: true) do |form| %>
-      <%= form.text_field :ex_amount, placeholder: "1,000円" %>
-      <%= form.text_field :about_ex, placeholder: "表参道のカフェ" %>
-      <%= form.text_field :category_id %>
+    <h3>支出を記入</h3>
+    <%= form_with(model: @expense, local: true, url:dashboard_expenses_path(Date.current.strftime('%Y-%m-%d'))) do |form| %>
+        <div class='form-text-wrap'>
+        <label class="form-text">金額</label>
+        <span class="indispensable">必須</span>
+        </div>
+      <%= form.text_field :ex_amount, placeholder: "（例）1000", class:"price-input" %>
+        
+      <div class='form-text-wrap'>
+        <label class="form-text">支出日</label>
+        <span class="indispensable">必須</span>
+       </div>
+      <%= form.datetime_field :month %>
+
+        <div class='form-text-wrap'>
+        <label class="form-text">カテゴリー</label>
+        <span class="indispensable">必須</span>
+        </div>
+      <%= form.collection_select(:category_id, Category.all, :id, :name,{}, {class:"select-box", id:"expense-category"}) %>
+
+      <div class='form-text-wrap'>
+        <label class="form-text">メモ</label>
+        <span class="indispensable">必須</span>
+        </div>
+      <%= form.text_field :about_ex, placeholder: "（例）お店の名前など" %>
+
       <%= form.submit "SEND" %>
     <% end %>
   </div>
