@@ -1,7 +1,7 @@
 # README
 
 # アプリケーション名
-@balance
+plus+minus-balance
 
 # アプリケーション概要
 1ヶ月でどのくらい支出をしているか

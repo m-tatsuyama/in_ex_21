@@ -9,11 +9,13 @@
     </div>
   </div>
   <div class="data-box">
-    <div class="btn-center"> 
-        <ul>
-        <li><div class="btn-data"><%= link_to "家計簿作成", new_dashboard_income_path(Date.current.strftime('%Y-%m-%d')) %></div></li>       
-        <li><div class="btn"><%= link_to "支出の入力", new_dashboard_expense_path(Date.current.strftime('%Y-%m-%d')) %></div></li>
-        </ul>
+    <div class="btn-center">
+      <div class="btn-padding">
+        <%= link_to image_tag("income-in.svg", :width => '200', class:"収入の記入"), new_dashboard_income_path(Date.current.strftime('%Y-%m-%d')) %>
+      </div>
+      <div class="btn-padding">
+        <%= link_to image_tag("expense-in.svg", :width => '200', class:"支出の記入"), new_dashboard_expense_path(Date.current.strftime('%Y-%m-%d')) %>
+      </div>
     </div>
   </div>
 </div>

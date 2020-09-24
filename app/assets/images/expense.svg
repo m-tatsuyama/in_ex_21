@@ -3,12 +3,11 @@
 <svg version="1.1" id="レイヤー_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
 	 y="0px" viewBox="0 0 11 7" style="enable-background:new 0 0 11 7;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:#DBB8AD;}
+	.st0{fill:#FAB9B2;}
 	.st1{fill:#FFFFFF;}
 </style>
 <g>
-	<path class="st0" d="M7.28,0.13c-1.52,0-2.75,1.23-2.75,2.75c0,1.52,1.23,2.75,2.75,2.75s2.75-1.23,2.75-2.75
-		C10.03,1.36,8.8,0.13,7.28,0.13z"/>
-	<rect x="5.8" y="2.49" class="st1" width="2.96" height="0.79"/>
+	<path class="st0" d="M7.3,0.1c-1.5,0-2.8,1.2-2.8,2.8s1.2,2.8,2.8,2.8S10,4.4,10,2.9C10,1.4,8.8,0.1,7.3,0.1z"/>
+	<rect x="5.8" y="2.5" class="st1" width="3" height="0.8"/>
 </g>
 </svg>

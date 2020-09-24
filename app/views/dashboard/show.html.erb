@@ -23,7 +23,7 @@
           </table>
           </div>
           <div class="data-header-r">
-          <div class="data-header-r-1"></div>
+            <div class="data-header-r-1"></div>
           <table>
             <tr>
               <td class="total-text-bold">収入の合計</td>
@@ -38,7 +38,7 @@
       <div class="data-left">
         <div class="data-left-1">
           <div class="data-left-1-l">
-          <%= image_tag "icon-valiable.svg", :width => '133', class:"収入" %>
+          <%= image_tag "icon-valiable.svg", :width => '172', class:"変動費" %>
           </div>
           <div class="data-left-1-r"></div>
         </div>
@@ -90,14 +90,14 @@
             </table>
             <div class="total-right2">
               <div class="total-text-bold">変動費の合計</div>
-            <div class="td-right-total big_sum"> ¥ <%= @valiable.to_s(:delimited) %></div>
+            <div class="td-right-total big_sum pink-font"> ¥ <%= @valiable.to_s(:delimited) %></div>
             </div>
           </div>
         </div>
       </div>
     <div class="data-right">
       <div class= "data-right-1">
-      <%= image_tag "icon-fixed.svg", :width => '100', class:"収入" %>
+      <%= image_tag "icon-fixed.svg", :width => '125', class:"収入" %>
       </div>
       <div class= "data-right-2">
         <table>
@@ -136,7 +136,7 @@
         </table>
         <div class="total-right2"><br><br>
           <div class="total-text-bold">固定費の合計</div>
-          <div class="td-right-total big_sum"> ¥ <%= @fixed.to_s(:delimited) %></div>
+          <div class="td-right-total big_sum pink-font"> ¥ <%= @fixed.to_s(:delimited) %></div>
         </div> 
       </div>
       </div> 
@@ -148,11 +148,11 @@
           </div>
         <div class= "data-total-c">
             <div class="total-text-bold"><%= image_tag "expense.svg", :width => '45'%> 支出の合計</div>
-            <div class="td-right-total big_sum"> ¥ <%= @total_ex.to_s(:delimited) %></div>
+            <div class="td-right-total big_sum pink-font"> ¥ <%= @total_ex.to_s(:delimited) %></div>
         </div>
         <div class= "data-total-r">
             <div class="total-text-bold">今月の残り</div>
-            <div class="td-right-total big_sum"> ¥ <%= @diff.to_s(:delimited) %></div>
+            <div class="td-right-total big_sum2"> ¥ <%= @diff.to_s(:delimited) %></div>
         </div></div>
 
         </div>
