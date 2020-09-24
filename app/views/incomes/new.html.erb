@@ -1,27 +1,23 @@
 <div class="form-group">
   <div class="container">
     <h3>収入を記入</h3>
-    <%= form_with(model: @income, local: true, url:dashboard_incomes_path(Date.current.strftime('%Y-%m-%d'))) do |form| %>
-      
-      <div class='form-text-wrap'>
-      <label class="form-text">収入の種類</label>
-      <span class="indispensable">必須</span>
-      </div>
-      <%= form.text_field :about_in, placeholder: "（例）給与" %>
-    
-     <div class='form-text-wrap'>
-      <label class="form-text">金額</label>
-      <span class="indispensable">必須</span>
-      </div>
-      <%= form.text_field :in_amount, placeholder: "（例）1000",class:"price-input" %>
-
-      <div class='form-text-wrap'>
-        <label class="form-text">収入日</label>
-        <span class="indispensable">必須</span>
-       </div>
-      <%= form.datetime_field :month %>
-    
-      <%= form.submit "SEND" %>
-    <% end %>
+      <%= form_with(model: @income, local: true, url:dashboard_incomes_path(Date.current.strftime('%Y-%m-%d'))) do |form| %>
+        <div class='form-text-wrap'>
+          <label class="form-text">金額</label>
+          <span class="indispensable">必須</span>
+        </div>
+        <%= form.text_field :in_amount, placeholder: "（例）1000",class:"price-input" %>
+          <div class='form-text-wrap'>
+            <label class="form-text">収入の種類</label>
+            <span class="indispensable">必須</span>
+          </div>
+        <%= form.text_field :about_in, placeholder: "（例）給与" %>
+          <div class='form-text-wrap'>
+            <label class="form-text">収入日</label>
+            <span class="indispensable">必須</span>
+          </div>
+        <%= form.datetime_field :month %>     
+        <%= form.submit "SEND" %>
+      <% end %>
   </div>
 </div>

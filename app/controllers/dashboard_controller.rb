@@ -13,16 +13,12 @@ class DashboardController < ApplicationController
     search_date = params[:id]
     @expenses = current_user.expenses.where(month: search_date.in_time_zone.all_month)
     @incomes = current_user.incomes.where(month: search_date.in_time_zone.all_month)
-
     # 受け取った支出をいれる
     @sumexpenses = @expenses.group(:category_id).sum(:ex_amount)
-
     # カテゴリーをキーと紐付ける
     @categories = Category.find(@sumexpenses.keys)
-
     # 収入の総合計
     @sumincomes = @incomes.sum(:in_amount)
-
     # 支出の合計
     @total_ex = @expenses.sum(:ex_amount)
     # 変動費の合計
@@ -34,4 +30,3 @@ class DashboardController < ApplicationController
 
   end
 end
-    # （オプション実装）数値がない時に0を表示する
