@@ -1,28 +1,5 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
 # アプリケーション名
 @balance
 
@@ -36,18 +13,17 @@ Things you may want to cover:
 支出のカテゴリーを色で分けたグラフが見られる
 目標を設定したら、目標を踏まえたグラフが表示される
 
-# アプリケーション概要
+# URL
 デプロイ次第公開
 
-# アプリケーション概要
-テスト用アカウント
+# テスト用アカウント
 
 Basic認証
 id: admin
 pass: 2222
 
 アカウント
-mail: mmm@mmm
+mail: ttt@ttt
 pass: 111qqq
 
 # 利用方法
@@ -102,7 +78,9 @@ pass: 111qqq
 
 ## 実装した機能についてのGIFと説明
 
-実装した機能について、それぞれどのような特徴があるのか列挙しましょう。GIFを添えることで、イメージがしやすくなります。
+- ユーザー管理機能
+- 入力フォーム
+- アイウエオ
 
 ## 実装予定の機能
 ## 機能
@@ -217,5 +195,3 @@ git clone https://github.com/m-tatsuyama/in_ex_21.git
 ### Association
 
 - belongs_to :user
-
-
