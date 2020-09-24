@@ -10,13 +10,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_17_084550) do
+ActiveRecord::Schema.define(version: 2020_09_21_061514) do
 
   create_table "expenses", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "about_ex", null: false
     t.integer "ex_amount", null: false
+    t.integer "category_id", null: false
+    t.bigint "user_id", null: false
+    t.date "month", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_expenses_on_user_id"
+  end
+
+  create_table "incomes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "about_in", null: false
+    t.integer "in_amount", null: false
+    t.bigint "user_id", null: false
+    t.date "month", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_incomes_on_user_id"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -32,4 +46,6 @@ ActiveRecord::Schema.define(version: 2020_09_17_084550) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "expenses", "users"
+  add_foreign_key "incomes", "users"
 end

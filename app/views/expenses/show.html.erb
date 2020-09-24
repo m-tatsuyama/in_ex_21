@@ -3,14 +3,14 @@
       <span><%= image_tag 'arrow_top.png' %></span>
       <ul class="more_list">
         <li>
-          <%= link_to '編集', edit_tweet_path(@expense.id), method: :get %>
+          <%= link_to '編集', edit_expense_path(@expense.id), method: :get %>
         </li>
         <li>
-          <%= link_to '削除', tweet_path(@expenset.id), method: :delete %>
+          <%= link_to '削除', expense_path(@expense.id), method: :delete %>
         </li>
       </ul>
     </div>
-    <p><%= @tweet.text %></p>
+    <p><%= @expense.text %></p>
     <span class="name"><%= @expense.name %>
     </span>
   </div>

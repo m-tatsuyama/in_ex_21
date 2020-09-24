@@ -1,0 +1,173 @@
+<div class="wrapper">
+  <div class="side-bar">
+    <div class="side-bar-header">
+      <div class="big-month">
+        <%= Date.current.strftime('%m')%>
+      </div>
+      <%= Date.current.strftime('%Y.%m.%d')%>
+    </div>
+  </div>
+  <div class="data-box">
+    <% if user_signed_in? %>
+      <div class="data-header">
+        <div class="data-header-l"><%= image_tag "icon-income.svg", :width => '150', class:"収入" %></div>
+        <div class="data-header-c">
+          <table>
+            <% @incomes.each do |income| %>
+              <tr>
+                <td class="td-left"><%= income.about_in %></td>
+                <td class="td-right2 amount_sum"><%= income.in_amount.to_s(:delimited) %>
+                </td>
+              </tr>
+            <% end %>
+          </table>
+          </div>
+          <div class="data-header-r">
+          <div class="data-header-r-1"></div>
+          <table>
+            <tr>
+              <td class="total-text-bold">収入の合計</td>
+            </tr>
+            <tr>
+              <td class="td-right-total big_sum"> ¥ <%= @sumincomes.to_s(:delimited) %></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    <div class="data-footer">
+      <div class="data-left">
+        <div class="data-left-1">
+          <div class="data-left-1-l">
+          <%= image_tag "icon-valiable.svg", :width => '133', class:"収入" %>
+          </div>
+          <div class="data-left-1-r"></div>
+        </div>
+        <div class="data-left-2">
+          <div class="data-left-2-l"></div>
+            <div class="data-left-2-r">
+            <table>
+              <tr>
+                <td class="td-left">食材費</td>
+                <td class="td-right amount_sum"><%= @sumexpenses[2] %></td>
+              </tr>
+              <tr>
+                <td class="td-left">外食</td>
+                <td class="td-right amount_sum"><%= @sumexpenses[3] %></td>
+              </tr>
+              <tr>
+                <td class="td-left">カフェ</td>
+                <td class="td-right amount_sum"><%= @sumexpenses[4] %></td>
+              </tr>
+              <tr>
+                <td class="td-left">おやつ</td>
+                <td class="td-right amount_sum"><%= @sumexpenses[5] %></td>
+              </tr>
+              <tr>
+                <td class="td-left">美容費</td>
+                <td class="td-right amount_sum"><%= @sumexpenses[6] %></td>
+              </tr>
+              <tr>
+                <td class="td-left">交通費</td>
+                <td class="td-right amount_sum"><%= @sumexpenses[7] %></td>
+              </tr>
+              <tr>
+                <td class="td-left">日用品</td>
+                <td class="td-righ amount_sum"><%= @sumexpenses[8] %></td>
+              </tr>
+              <tr>
+                <td class="td-left">書籍代</td>
+                <td class="td-right amount_sum"><%= @sumexpenses[9] %></td>
+              </tr>
+              <tr>
+                <td class="td-left">特別支出</td>
+                <td class="td-right amount_sum"><%= @sumexpenses[10] %></td>
+              </tr>
+              <tr>
+                <td class="td-left">その他</td>
+                <td class="td-right amount_sum"><%= @sumexpenses[19] %></td>
+              </tr>
+              </div>
+            </table>
+            <div class="total-right2">
+              <div class="total-text-bold">変動費の合計</div>
+            <div class="td-right-total big_sum"> ¥ <%= @valiable.to_s(:delimited) %></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <div class="data-right">
+      <div class= "data-right-1">
+      <%= image_tag "icon-fixed.svg", :width => '100', class:"収入" %>
+      </div>
+      <div class= "data-right-2">
+        <table>
+              <tr>
+                <td class="td-left">家賃</td>
+                <td class="td-right amount_sum"><%= @sumexpenses[11] %></td>
+              </tr>
+              <tr>
+                <td class="td-left">電気</td>
+                <td class="td-right amount_sum"><%= @sumexpenses[12] %></td>
+              </tr>
+              <tr>
+                <td class="td-left">ガス</td>
+                <td class="td-right amount_sum"><%= @sumexpenses[13] %></td>
+              </tr>
+              <tr>
+                <td class="td-left">水道</td>
+                <td class="td-right amount_sum"><%= @sumexpenses[14] %></td>
+              </tr>
+              <tr>
+                <td class="td-left">携帯</td>
+                <td class="td-right amount_sum"><%= @sumexpenses[15] %></td>
+              </tr>
+              <tr>
+                <td class="td-left">通信費</td>
+                <td class="td-right amount_sum"><%= @sumexpenses[16] %></td>
+              </tr>
+              <tr>
+                <td class="td-left">定期</td>
+                <td class="td-right amount_sum"><%= @sumexpenses[17] %></td>
+              </tr>
+              <tr>
+                <td class="td-left">保険</td>
+                <td class="td-right amount_sum"><%= @sumexpenses[18] %></td>
+              </tr>
+        </table>
+        <div class="total-right2"><br><br>
+          <div class="total-text-bold">固定費の合計</div>
+          <div class="td-right-total big_sum"> ¥ <%= @fixed.to_s(:delimited) %></div>
+        </div> 
+      </div>
+      </div> 
+      <div class="total">
+        <div class= "data-total-l">
+          <div class="total-right">
+            <div class="total-text-bold"><%= image_tag "income.svg", :width => '45'%> 収入の合計</div>
+            <div class="td-right-total big_sum"> ¥ <%= @sumincomes.to_s(:delimited) %></div>
+          </div>
+        <div class= "data-total-c">
+            <div class="total-text-bold"><%= image_tag "expense.svg", :width => '45'%> 支出の合計</div>
+            <div class="td-right-total big_sum"> ¥ <%= @total_ex.to_s(:delimited) %></div>
+        </div>
+        <div class= "data-total-r">
+            <div class="total-text-bold">今月の残り</div>
+            <div class="td-right-total big_sum"> ¥ <%= @diff.to_s(:delimited) %></div>
+        </div></div>
+
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <% else %>
+  <div class="btn-center">
+    <ul>
+      <li><div class="btn-data"><%= link_to "家計簿作成", new_dashboard_income_path(Date.current.strftime('%Y-%m-%d')) %></div></li>     
+      <li><div class="btn"><%= link_to "支出の入力", new_dashboard_expense_path(Date.current.strftime('%Y-%m-%d')) %></div></li>
+    </ul>
+  </div>
+  <% end %>
+    </div>
+</div>

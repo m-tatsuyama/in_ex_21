@@ -1,40 +1,28 @@
 class ExpensesController < ApplicationController
-before_action :set_expense, only: [:edit, :show]
-
-  def index
-    @expenses = Expense.all
-  end
 
   def new
-    @expenses = Expense.all
+    @expense = Expense.new
   end
 
   def create
-    Expense.create(expense_params)
+    @expense = Expense.new(expense_params)
+    if @expense.save
+      redirect_to dashboard_path(expense_params[:month])
+    else
+      render :new
+    end
   end
 
   def destroy
-    expense = Expense.find(params[:id])
+    expense = Expense.find(expense_params[:id])
     expense.destroy
   end
 
   def edit
   end
 
-  def update
-    expense = Expense.find(params[:id])
-    expense.update(expense_params)
-  end
-
-  def show
-  end
-
   private
   def expense_params
-    params.require(:expense).permit(:ex_amount,:about_ex,:category_id)
-  end
-
-  def set_expense
-    @expense = Expense.find(params[:id])
+    params.require(:expense).permit(:ex_amount,:about_ex,:category_id, :month).merge(user_id: current_user.id)
   end
 end

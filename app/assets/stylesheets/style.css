@@ -344,8 +344,6 @@ table {
 
 /* ==========================================================================
  * CSS SETTING
- * by Hiroaki WAKATSUKI
- * Converted 2014/2/16
  * ========================================================================== */
 *,
 *:before,
@@ -468,7 +466,7 @@ ul li {
   margin-right: auto;
   margin-top: 0;
   margin-bottom: 0;
-  max-width: 660px;
+  max-width: 1000px;
   *zoom: 1;
 }
 
@@ -652,17 +650,17 @@ h4,
 h5,
 h6,
 body {
-  line-height: 1.57;
+  line-height: 1.8;
   letter-spacing: 0.15em;
   font-size: 16px;
-  color: #666;
+  color: #62524D;
   font-family: 'brandon-grotesque', 'Unica One', "Avenir", "游ゴシック", "YuGothic", "ヒラギノ角ゴ Pro W6", "HIragino Kaku Gothic Pro W6", "HIragino Kaku Gothic Pro", Osaka, Meiryo, "メイリオ", "ＭＳ Ｐゴシック", "MS P Gothic", sans-serif;
   margin: 0;
 }
 
 a {
   text-decoration: none;
-  color: #666;
+  color: #62524D;
 }
 
 a:hover {
@@ -1002,11 +1000,12 @@ form input[type="submit"] {
 }
 
 form input[type="submit"]:hover {
-  background-color: #84d3ef;
+  background-color: #ED958E;
 }
 
 .container {
-  margin: 20px 0;
+  width: 400px;
+  margin-top: 20px;
   padding: 30px;
   box-shadow: 0 0 10px rgba(41, 41, 41, 0.2);
   background-color: white;

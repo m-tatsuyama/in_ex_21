@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>money.be</title>
+    <title><div class= "bold">@balance</div></title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     
@@ -14,11 +14,14 @@
   <body>
     <header class="header">
       <div class="header__bar row">
-        <h1 class="grid-6"><a href="/">money.be</a></h1>
+        <h1 class="grid-6"><a href="/"><%= image_tag "pmbalance.svg", :width => '180', class:"+-balance" %></a></h1>
         <% if user_signed_in? %>
-          <div class="user_nav grid-6">
-            <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
-            <%= link_to "投稿する", new_expense_path, class: "post" %>
+          <div class="grid-6 strong">
+            <div class="margin-r50">
+              <%= link_to ": 収入を記入", new_dashboard_income_path(Date.current.strftime('%Y-%m-%d')) %>
+              <%= link_to ": 支出を記入", new_dashboard_expense_path(Date.current.strftime('%Y-%m-%d')) %>
+              <%= link_to ": ログアウト", destroy_user_session_path, method: :delete %>
+            </div>
           </div>
         <% else %>
           <div class="grid-6">
@@ -31,7 +34,7 @@
     <%= yield %>
     <footer>
       <p>
-        Copyright money.be 2020.
+        Copyright @balance 2020.
       </p>
     </footer>
   </body>
