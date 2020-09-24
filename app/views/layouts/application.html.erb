@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><div class= "bold">plus+minus-balance</div></title>
+    <title>plus+minus-balance</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     
@@ -10,7 +10,6 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link rel="stylesheet" href="https://use.typekit.net/nfh8iwu.css">
   </head>
-
   <body>
     <header class="header">
       <div class="header__bar row">
@@ -18,9 +17,9 @@
         <% if user_signed_in? %>
           <div class="grid-6 strong">
             <div class="margin-r50">
-              <%= link_to ": 収入を記入", new_dashboard_income_path(Date.current.strftime('%Y-%m-%d')) %>
-              <%= link_to ": 支出を記入", new_dashboard_expense_path(Date.current.strftime('%Y-%m-%d')) %>
-              <%= link_to ": ログアウト", destroy_user_session_path, method: :delete %>
+              <%= link_to image_tag("in-pen.svg", :width => '85', class:"収入の記入"), new_dashboard_income_path(Date.current.strftime('%Y-%m-%d')) %>
+              <%= link_to image_tag("ex-pen.svg", :width => '85', class:"支出の記入"), new_dashboard_expense_path(Date.current.strftime('%Y-%m-%d')) %>
+              <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "post" %>
             </div>
           </div>
         <% else %>

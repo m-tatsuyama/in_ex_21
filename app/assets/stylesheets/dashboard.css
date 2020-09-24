@@ -1,6 +1,6 @@
 /* 左上の日付 */
 .big-month {
-  font-size: 85px;
+  font-size: 88px;
   font-weight: 700;
   justify-content: center;
   line-height: 95%;
@@ -9,6 +9,10 @@
 /* 大きい合計数値 */
 .big_sum {
   font-size: 28px;
+  font-weight: 700;
+}
+.big_sum2 {
+  font-size: 35px;
   font-weight: 700;
 }
 /* 大きい合計数値 */
@@ -67,10 +71,9 @@ header.header div.header__bar.row div.grid-6 a.post {
 }
 .data-header {
   background-color: white;
-  height: 150px;
+  height: 155px;
   width: 710px;
   border-radius: 5px;
-  display: inline-block;
   padding: 25px;
   display: flex;
   justify-content: space-between;
@@ -78,7 +81,7 @@ header.header div.header__bar.row div.grid-6 a.post {
 .data-header-l {
   background-image: none;
   margin-right: 30px;
-  width: 80px;
+  width: 100px;
 }
 .data-header-c {
   width: 253px;
@@ -94,7 +97,8 @@ header.header div.header__bar.row div.grid-6 a.post {
 .total-text-bold {
 font-weight: 700;
 text-align: right;
-padding-top: 20px;
+padding-top: 30px;
+line-height: 90%;
 }
 .td-left {
   text-align: left;
@@ -111,7 +115,7 @@ padding-top: 20px;
   text-align: right;
 }
 .data-footer {
-  height: 590px;
+  height: 580px;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -194,4 +198,10 @@ padding-top: 20px;
   justify-content: center;
   padding-top: 100px;
   display: flex;
+}
+.btn-padding {
+  padding: 20px;
+}
+.pink-font {
+  color: #ED958E;
 }
