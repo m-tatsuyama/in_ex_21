@@ -18,6 +18,6 @@ class Category < ActiveHash::Base
     { id: 16, name: '通信費' },
     { id: 17, name: '定期' },
     { id: 18, name: '保険' },
-    { id: 19, name: 'その他' },
+    { id: 19, name: 'その他' }
   ]
 end

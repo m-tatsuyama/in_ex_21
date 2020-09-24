@@ -1,5 +1,4 @@
 class UsersController < ApplicationController
- 
   def show
     @expense = current_user.expenses
     @income = current_user.incomes

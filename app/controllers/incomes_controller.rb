@@ -1,5 +1,4 @@
 class IncomesController < ApplicationController
-  
   def new
     @income = Income.new
   end
@@ -22,6 +21,7 @@ class IncomesController < ApplicationController
   end
 
   private
+
   def income_params
     params.require(:income).permit(:in_amount, :about_in, :month).merge(user_id: current_user.id)
   end
