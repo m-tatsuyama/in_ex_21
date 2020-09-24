@@ -796,7 +796,6 @@ div.contents.row h2 {
 
 div.contents.row h2 strong {
   font-weight: bold;
-  padding-right: 5px;
   font-size: 1.2em;
 }
 
@@ -811,7 +810,7 @@ div.contents.row div.content_post {
   height: 400px;
   color: #fff;
   background-size: cover;
-  background-position: center center;
+  background-position: center;
   border-radius: 3px;
   box-shadow: 0 0 10px rgba(41, 41, 41, 0.2);
 }
@@ -851,7 +850,7 @@ div.contents.row div.content_post .more:hover ul.more_list {
 }
 
 div.contents.row div.content_post .more ul.more_list {
-  position: absolute;
+  /* position: absolute; */
   text-align: left;
   width: 80px;
   right: 0;
@@ -882,9 +881,9 @@ div.contents.row div.content_post .more ul.more_list li a:hover {
 }
 
 div.contents.row div.content_post p {
-  position: absolute;
+  /* position: absolute;
   left: 30px;
-  right: 100px;
+  right: 100px; */
   bottom: 30px;
   margin: 0;
   font-size: 20px;
@@ -894,8 +893,8 @@ div.contents.row div.content_post p {
 }
 
 div.contents.row div.content_post span.name {
-  position: absolute;
-  right: 30px;
+  /* position: absolute;
+  right: 30px; */
   bottom: 30px;
   z-index: 2;
   font-size: 13px;
