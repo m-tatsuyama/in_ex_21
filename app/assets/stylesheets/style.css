@@ -297,14 +297,14 @@ input[type="radio"] {
  * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
  * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
  *    (include `-moz` to future-proof). */
-input[type="search"] {
-  -webkit-appearance: textfield;
+/* input[type="search"] {
+  -webkit-appearance: textfield; */
   /* 1 */
-  -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
+  /* -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box; */
   /* 2 */
-  box-sizing: content-box;
-}
+  /* box-sizing: content-box;
+} */
 
 /*
  * Remove inner padding and search cancel button in Safari 5 and Chrome
@@ -428,7 +428,7 @@ i {
   font-style: normal;
 }
 
-.animate {
+/* .animate {
   -moz-transition-property: all;
   -o-transition-property: all;
   -webkit-transition-property: all;
@@ -441,7 +441,7 @@ i {
   -o-transition-timing-function: ease-in;
   -webkit-transition-timing-function: ease-in;
   transition-timing-function: ease-in;
-}
+} */
 
 .button {
   background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0.05) 1%, rgba(0, 0, 0, 0.2) 100%);
@@ -467,7 +467,6 @@ ul li {
   margin-top: 0;
   margin-bottom: 0;
   max-width: 1000px;
-  *zoom: 1;
 }
 
 .row .grid-1,
@@ -766,7 +765,7 @@ header.header div.header__bar.row div.grid-6 {
 
 header.header div.header__bar.row div.grid-6 a.post {
   width: 120px;
-  display: inline-left;
+  /* display: inline-left; */
   margin-left: 10px;
 }
 
@@ -820,10 +819,10 @@ header.header .user_nav ul li a {
   border-bottom: 1px solid #d8d8d8;
 }
 
-.form {
+/* .form {
   background: url(https://dl.dropboxusercontent.com/u/5840617/DeathtoStock_Wired3.jpg);
   background-size: cover;
-}
+} */
 
 .form .contents {
   position: absolute;
@@ -876,7 +875,7 @@ div.contents.row div.content_post:after {
   left: 0;
   right: 0;
   *zoom: 1;
-  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF000000', endColorstr='#FFA60000');
+  /* filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF000000', endColorstr='#FFA60000'); */
   background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjAiLz48c3RvcCBvZmZzZXQ9IjYyJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjAiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMC44NSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
   background-size: 100%;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(62%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0.85)));
