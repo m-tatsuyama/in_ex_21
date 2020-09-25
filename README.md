@@ -15,7 +15,7 @@ plus+minus-balance
 
 # URL
 https://git.heroku.com/in-ex-21.git
-（現在エラー発生中につき、反映前です）
+（現在エラー発生中で閲覧できません...）
 
 # テスト用アカウント
 
