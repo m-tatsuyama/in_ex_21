@@ -25,7 +25,8 @@ module TimeFormatSandbox
     # ...
 
     # タイムゾーンを日本時間に設定
-    config.time_zone = 'Asia/Tokyo'
+    config.time_zone = 'Tokyo'
+    config.active_record.default_timezone = :local
   end
 end
 
