@@ -14,8 +14,7 @@ plus+minus-balance
 目標を設定したら、目標を踏まえたグラフが表示される
 
 # URL
-https://git.heroku.com/in-ex-21.git
-（現在エラー発生中で閲覧できません...）
+デプロイ前
 
 # テスト用アカウント
 
