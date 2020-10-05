@@ -246,7 +246,7 @@ PLATFORMS
 
 DEPENDENCIES
   active_hash
-  bootsnap (>= 1.4.5)
+  bootsnap (>= 1.4.2)
   byebug
   capybara (>= 2.15)
   devise
